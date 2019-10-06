@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="dist/themes/default/style.min.css" />
+  <link rel="stylesheet" href="css/jstree/jstree.css" />
+
+  <title>Prova Estágio GSW</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <img class="format-logo" src="assets/logo-gsw-en.svg" alt="Logo GSW">
+    <div id="hamburguer-menu-wrapper">
+      <button class="navbar-toggler hamburguer" type="button" data-toggle="collapse"
+        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <form class="form-inline my-2 my-lg-0 search-form">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <!-- Modal Criar Projeto -->
+        <li class="nav-item active">
+          <a class="nav-link" id="format-text-bar" data-toggle="modal" data-target="#mocalCriarProj"
+            data-whatever="@getbootstrap">Criar projeto <span class="sr-only">(current)</span></a>
+          <div class="modal fade" id="mocalCriarProj" tabindex="-1" role="dialog" aria-labelledby="mocalCriarProj"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="mocalCriarProj">Criar projeto</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="recipient-name" placeholder="Nome do projeto">
+                    </div>
+                    <div class="form-group">
+                      <select class="form-control" id="exampleFormControlSelect1">
+                        <option>Selecione o cliente</option>
+                        <option>Tanby Papelaria</option>
+                        <option>Embraer</option>
+                        <option>Petrobras</option>
+                      </select>
+                    </div>
+                    <!-- projeto privado com seleção-->
+                    <div class="form-group">
+                      <ol class="breadcrumb format-line-modal">
+                        <li class="breadcrumb-item active" id="format-txt-line-modal">Projeto privado</li>
+                        <li> <img class="format-icon" src="assets/icon-info.png" alt="Icone information"></li>
+                        <li>
+                          <div class="form-check format-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                              value="option1" checked>
+                            <label class="form-check-label" for="exampleRadios1">Sim</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                              value="option2">
+                            <label class="form-check-label" for="exampleRadios2">Não</label>
+                          </div>
+                        </li>
+                      </ol>
+                    </div>
+                    <!-- hora e data-->
+                    <div class="form-group">
+                      <input type='text' class="form-control" id='datetimepicker4' placeholder="Data" />
+                    </div>
+                    <!--adicionar usuarios com seleção-->
+                    <div class="form-group">
+        <li class="breadcrumb-item active" id="format-txt-line-modal">Adicionar usuários</li>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="Adan Henrique">Adan Henrique</input>
+          </br>
+          <input class="form-check-input" type="checkbox" value="Antonio Nunes">Antonio Nunes</input>
+          </br>
+          <input class="form-check-input" type="checkbox" value="José Severino">José Severino</input>
+        </div>
+    </div>
+    <!-- botão finalizador-->
+    <div class="form-group">
+      <button type="button" class="btn btn-primary btn-lg btn-block" data-dismiss="modal">Criar Projeto</button>
+    </div>
+    </form>
+    </div>
+
+    </div>
+    </div>
+    </div>
+    </li>
+    <!--Modal cadastrar usuario-->
+    <li class="nav-item">
+      <a class="nav-link" id="format-text-bar" data-toggle="modal" data-target="#modalCadUsuario"
+        data-whatever="@getbootstrap">Cadastrar usuario<span class="sr-only">(current)</span></a>
+      <div class="modal fade" id="modalCadUsuario" tabindex="-1" role="dialog" aria-labelledby="modalCadUsuario"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalCadUsuario">Cadastrar usuário</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="recipient-name" placeholder="Nome do usuário">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="recipient-name" placeholder="CPF">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="recipient-name"
+                    placeholder="Digite o e-mail (Será o login de acesso)">
+                </div>
+                <!-- permissoes de adm ou user-->
+                <div class="form-group">
+                  <ol class="breadcrumb format-line-modal">
+                    <li class="breadcrumb-item active" id="format-txt-line-modal">Permissão</li>
+                    <li> <img class="format-icon" src="assets/icon-info.png" alt="Icone information"></li>
+                    <li>
+                      <div class="form-check col-3">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="radioAdm" value="option1"
+                          checked>
+                        <label class="form-check-label" for="radioAdm">Administrador</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="form-check col-3">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="radioUsu" value="option2">
+                        <label class="form-check-label" for="radioUsu">Usuário</label>
+                      </div>
+                    </li>
+                  </ol>
+                </div>
+                <!--adicionar usuarios com seleção-->
+                <div class="form-group">
+                  <p>+ Atribuir projetos a esse usuário</p>
+                </div>
+                <!-- botão finalizador-->
+                <div class="form-group">
+                  <button type="button" class="btn btn-primary btn-lg btn-block" data-dismiss="modal">Cadastrar
+                    Usuário</button>
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </li>
+    <!--Modal cadastrar cliente-->
+    <li class="nav-item">
+      <a class="nav-link" id="format-text-bar" data-toggle="modal" data-target="#modalCadCliente"
+        data-whatever="@getbootstrap">Cadastrar cliente<span class="sr-only">(current)</span></a>
+      <div class="modal fade" id="modalCadCliente" tabindex="-1" role="dialog" aria-labelledby="modalCadCliente"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalCadCliente">Cadastrar cliente</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="recipient-name" placeholder="Razão social">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="recipient-name" placeholder="CPF/CNPJ">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="recipient-name" placeholder="Digite o e-mail">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="recipient-name" placeholder="Endereço">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="recipient-name" placeholder="Telefone">
+                </div>
+
+                <!--Atribuir projs-->
+                <div class="form-group">
+                  <p>+ Atribuir projetos a esse cliente</p>
+                </div>
+                <!-- botão finalizador-->
+                <div class="form-group">
+                  <button type="button" class="btn btn-primary btn-lg btn-block" data-dismiss="modal">Cadastrar
+                    Cliente</button>
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </li>
+    </ul>
+    </div>
+  </nav>
+  <div class="container-fullwidth">
+    <div class="row">
+      <!--coluna 1-->
+      <div class="col" >
+        <div id="jstree">
+          <img class="format-logo img-format" src="assets/einstein.png" alt="Foto usuário"> Dashboard Admin
+          <ul>
+            <li>Dashboard</li>
+            <li>Cadastros
+              <ul>
+                <li id="child_node_1">Usuários</li>
+                <li><a href="#">Clientes</a></li>
+              </ul>
+            </li>
+            <li>Projetos
+              <ul>
+               <li id="child_node_1">Criar prjeto</li>
+                <li>Relatorio</li>
+               <li>Registros</li>
+              </ul>
+            </li>  
+            <li>Meu perfil
+              <ul>
+                <li id="child_node_1">Trocar senha</li>
+                <li>Editar perfil</li>
+              </ul>
+            </li>
+            <li>Ver registro de horas</li>
+            <li>Configurações</li>
+            <li>Sair do sistema</li>
+          </ul>
+        </div>
+      </div>
+      <!---->
+      <div class="col-10 content-wrapper" id="format-colum-2">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item" id="breadcrumb-format">Home</li>
+            <li class="breadcrumb-item active" aria-current="page" id="breadcrumb-format">Dashboard</li>
+          </ol>
+        </nav>
+        <p id="p-welcome">Olá <span class="font-name">José Severino</span>, bem vindo!</p>
+        <p id="p-sub-welcome"> Veja o andamento dos projetos</p>
+        <div class="card box-list-records" id="format-card-box">
+          <form id="form-project">
+            <div class="form-group">
+              <label for="exampleFormControlSelect1" id="l-list-project">Listagem de projetos</label>
+              <select class="form-control select-format" id="exampleFormControlSelect1">
+                <option>Todos os registros de projetos</option>
+                <option>Tanby Papelaria</option>
+                <option>Embraer</option>
+                <option>Petrobras</option>
+              </select>
+            </div>
+          </form>
+          <div class="card-body" id="list-project">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <div>
+                  <p id="p-name-project">Tanby Papelaria > Desenvolvimento </p>
+                  <p id="p-sistem-project">Sistemas para gestão de estoque </p>
+                  <p id="p-date-project">Termina em 6 de Julho</p>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div>
+                  <p id="p-name-project">Embraer > Manutenção </p>
+                  <p id="p-sistem-project">Sistemas para gestão de estoque </p>
+                  <p id="p-date-project">Termina em 6 de Julho</p>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div>
+                  <p id="p-name-project">Petrobras > Manutenção </p>
+                  <p id="p-sistem-project">Sistemas para gestão de estoque </p>
+                  <p id="p-date-project">Termina em 6 de Julho</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="js/jquery/jquery.js"></script>
+  <script src="js/jstree/jstree.js"></script>
+  <script src="dist/jstree.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
+  <script src="js/popper/popper.js"></script>
+  <script src="js/bootstrap/bootstrap.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $('#datetimepicker4').datetimepicker();
+    });
+  </script>
+  <script>
+    $(function () { $('#jstree_demo_div').jstree(); });
+    $('#jstree_demo_div').on("changed.jstree", function (e, data) {
+      console.log(data.selected);
+    });
+    $('button').on('click', function () {
+      $('#jstree').jstree('select_node', 'child_node_1');
+    });
+  </script>
+
+</body>
+
+</html>
